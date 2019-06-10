@@ -4,13 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListUtility {
+    ArrayList <Integer> arr =new ArrayList<>();
+
+
+
     public Boolean add(int i) {
 
-        return null;
+         return arr.add(i);
     }
 
     public Integer size() {
-        return null;
+        return arr.size();
     }
 
     public List<Integer> getUnique() {
@@ -18,14 +22,21 @@ public class ListUtility {
     }
 
     public String join() {
-        return null;
+        String join ="";
+    for (int x=0; x<arr.size();x++)
+        join = (arr.get(x)).toString();
+        //return arr.toString();
+        return join;
     }
 
     public Integer mostCommon() {
+
         return null;
     }
 
     public Boolean contains(Integer valueToAdd) {
-        return null;
+
+
+        return arr.contains(valueToAdd);
     }
 }

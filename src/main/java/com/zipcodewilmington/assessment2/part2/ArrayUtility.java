@@ -48,6 +48,18 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
-       return null;
+        Arrays.sort(array);
+        int answer = array[0];
+        int count =0;
+        int max=1;
+        for (int x=0; x<array.length-1;x++){
+            if(array[x]== array[x-1]){
+                    count++;
+            } else if(count > max)
+                answer = array[x-1];
+                max=count;
+                count =0;
+        }
+       return answer;
     }
 }
